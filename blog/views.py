@@ -1,4 +1,3 @@
-
 from django.views.generic import ListView ,DetailView
 from .models import Post
 
@@ -10,6 +9,7 @@ class PostList(ListView):
 
 class PostDetail(DetailView):
     model = Post
+
 def index(request):
     posts = Post.objects.all().order_by('-pk')
 
